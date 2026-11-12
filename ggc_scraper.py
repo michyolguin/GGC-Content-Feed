@@ -301,9 +301,6 @@ def make_feed(items):
         ).text = entry["url"]
 
         description = entry["description"].strip()
-        description += (
-            "\n\n" if description else ""
-        ) + entry["url"]
 
         ET.SubElement(item, "description").text = description
 
